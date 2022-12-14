@@ -18,7 +18,7 @@ public class Conexion {
  Connection conectar= null;
  //Variables para credenciales
  String usuario="sa";
- String contrasenia="cr1s99";
+ String contrasenia="sql753";
  String bd="nutrikcal";
  String ip ="localhost";
  String puerto="1433";

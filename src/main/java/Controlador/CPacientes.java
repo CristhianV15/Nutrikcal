@@ -26,14 +26,13 @@ import javax.swing.JTextField;
  * @author crist
  */
 public class CPacientes {
-
-    //Metodo para mostrar pacientes
     public void mostrarPacientes(JTable paramTablaPacientes) {
-        //Crear objeto de la clase conexión
+        //Objeto de la clase conexión
         Conexion objetoConexion = new Conexion();
         DefaultTableModel modelo = new DefaultTableModel();
         //Variable sql para consulta
         String sql = "";
+        //Columnas de la tabla a mostrar
         modelo.addColumn("Id");
         modelo.addColumn("Nombre");
         modelo.addColumn("Apellido");
@@ -44,14 +43,14 @@ public class CPacientes {
         modelo.addColumn("Fecha nacimiento");
         modelo.addColumn("DNI");
         paramTablaPacientes.setModel(modelo);
-
         sql = "select * from Paciente where Estado =1;";
-
+        
         //Matriz
         String[] datos = new String[9];
         Statement st;
 
         try {
+            //Almacenar el resultado de la consulta en un result set
             st = objetoConexion.establecerConexion().createStatement();
             ResultSet rs = st.executeQuery(sql);
 
@@ -74,11 +73,10 @@ public class CPacientes {
     }
 
     public void SeleccionarPacientes(JTable paramTablaPacientes, JTextField pCodigo, JTextField pNombre, JTextField pApellido, JTextField pTelefono, JTextField pCorreo, JTextField pSexo, JTextArea pDatosA, JDateChooser pFechaNac, JTextField pDNI, JTextField pFechaString) {     
-        
-       
         try {
             int fila = paramTablaPacientes.getSelectedRow();
-            if (fila >= 0) { //se selecciono                
+            if (fila >= 0) { //se selecciono           
+                //Seleccionar de la tabla y asginar a textField
                 pCodigo.setText(paramTablaPacientes.getValueAt(fila, 0).toString());
                 pNombre.setText(paramTablaPacientes.getValueAt(fila, 1).toString());
                 pApellido.setText(paramTablaPacientes.getValueAt(fila, 2).toString());
@@ -86,14 +84,10 @@ public class CPacientes {
                 pCorreo.setText(paramTablaPacientes.getValueAt(fila, 4).toString());
                 pSexo.setText(paramTablaPacientes.getValueAt(fila, 5).toString());
                 pDatosA.setText(paramTablaPacientes.getValueAt(fila, 6).toString());
-                //pFechaNac.setDate(dcn);
                 pFechaString.setText(paramTablaPacientes.getValueAt(fila, 7).toString());
-                //Funciona
-                //pFechaNac.setDateFormatString( paramTablaPacientes.getValueAt(fila, 7).toString());
                 Date date= new SimpleDateFormat("yyyy-MM-dd").parse((String)paramTablaPacientes.getValueAt(fila, 7));
                 pFechaNac.setDate(date);
                 pDNI.setText(paramTablaPacientes.getValueAt(fila, 8).toString());
-                
             } else {
                 System.out.println("No se encontraron registros");
             }
@@ -104,15 +98,10 @@ public class CPacientes {
         String fechaNac = pFechaString.getText();
         pFechaNac.setDateFormatString(fechaNac);
         System.out.println(pFechaString.getText());
-        
-        
-        
     }
 
     public void InsertarPacientes(JTextField pNombre, JTextField pApellido, JTextField pTelefono, JTextField pCorreo, JTextField pSexo, JTextArea pDatosA, JDateChooser pFechaNac, JTextField pDNI) {
         Conexion objetoConexion = new Conexion();
-        //Falta fecha y edad 
-        //Transformación de fecha
         SimpleDateFormat dcn = new SimpleDateFormat("yyyy-MM-dd");
         String date = dcn.format(pFechaNac.getDate());
         String consultaSQL = "insert into Paciente(Nombre,Apellido,Telefono,Correo,Sexo,DatosAdicionales,FechaNac,DNI) values(?,?,?,?,?,?,?,?)";
@@ -152,10 +141,8 @@ public class CPacientes {
             cs.setString(7, pDNI.getText());
             cs.setString(8, date);
             cs.setInt(9, Integer.parseInt(pCodigo.getText()));
-
             cs.execute();
             JOptionPane.showMessageDialog(null, "Se modifico correctamente");
-
         } catch (Exception e) {
             System.out.println("Error");
         }
@@ -179,14 +166,10 @@ public class CPacientes {
         //Matriz
         String[] datos = new String[9];
         try {
-            //CallableStatement cs = objetoConexion.establecerConexion().prepareCall(sql);
-            //  cs.setInt(1, Integer.parseInt(pCodigo.getText()));
             pstatement = objetoConexion.establecerConexion().prepareStatement(sql);
-            //pstatement = connection.prepareStatement(sql);
             pstatement.setString(1, pDNI.getText());
             ResultSet rs = pstatement.executeQuery();
 
-            //ResultSet rs = cs.executeQuery(sql);
             while (rs.next()) {
                 datos[0] = rs.getString(1);
                 datos[1] = rs.getString(2);
@@ -220,7 +203,6 @@ public class CPacientes {
             //pstatement = connection.prepareStatement(sql);
             pstatement.setString(1, pDNI.getText());
             ResultSet rs = pstatement.executeQuery();
-
             //ResultSet rs = cs.executeQuery(sql);
             while (rs.next()) {
                 pEdad.setText(rs.getString(1));
@@ -234,7 +216,6 @@ public class CPacientes {
     }
     public void EliminarPacientes(JTextField pCodigo) {
         Conexion objetoConexion = new Conexion();
-      
         String consulta = "update Paciente set Estado=0 where idPaciente=?;";
         try {
             CallableStatement cs = objetoConexion.establecerConexion().prepareCall(consulta);
@@ -248,6 +229,8 @@ public class CPacientes {
     }
 }
 
+
+//Otros comentarios 
 //Hacer un getIndex al combo Y te devuelve la posición en entero
  //A ese resultado le sumas +1 (es decir posición 0 + 1)
 //El primer elemento de la tabla que tenga ID 1

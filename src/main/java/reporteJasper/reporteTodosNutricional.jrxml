@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="28d53d9c-dc07-4d56-b774-3b733f721153">
+	<queryString language="SQL">
+		<![CDATA[SELECT        Paciente.Nombre AS Paciente, Evaluacion.Talla, Evaluacion.Peso, Evaluacion.Kcant, Evaluacion.FechEval, Nutricionista.Nombre AS Nutricionista
+FROM            Evaluacion INNER JOIN
+                         Nutricionista ON Evaluacion.idNutricionista = Nutricionista.idNutricionista INNER JOIN
+                         Paciente ON Evaluacion.idPaciente = Paciente.idPaciente]]>
+	</queryString>
+	<field name="Paciente" class="java.lang.String"/>
+	<field name="Talla" class="java.lang.Integer"/>
+	<field name="Peso" class="java.lang.Double"/>
+	<field name="Kcant" class="java.lang.Integer"/>
+	<field name="FechEval" class="java.sql.Timestamp"/>
+	<field name="Nutricionista" class="java.lang.String"/>
+	<group name="FechEval">
+		<groupExpression><![CDATA[$F{FechEval}]]></groupExpression>
+		<groupHeader>
+			<band height="33">
+				<staticText>
+					<reportElement uuid="1d4a989d-1845-4ccc-9da2-f96217ea52f5" mode="Opaque" x="0" y="0" width="100" height="32" forecolor="#666666" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="12"/>
+					</textElement>
+					<text><![CDATA[FechEval]]></text>
+				</staticText>
+				<textField>
+					<reportElement uuid="71c1df52-fac4-4b1f-99dc-db8c4b7d3deb" mode="Opaque" x="100" y="0" width="455" height="32" forecolor="#006699" backcolor="#E6E6E6"/>
+					<textElement>
+						<font size="24" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{FechEval}]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement uuid="6e58b7ff-b05f-4088-bcd1-031f89b55a46" x="-20" y="32" width="595" height="1" forecolor="#666666"/>
+				</line>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement uuid="03941bd2-5621-4255-ae0f-273ead037bb0" mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699"/>
+				<staticText>
+					<reportElement uuid="2a99cb04-d571-43e2-ba7c-fb9030d5b465" x="20" y="20" width="234" height="43" forecolor="#FFFFFF"/>
+					<textElement>
+						<font size="34" isBold="true"/>
+					</textElement>
+					<text><![CDATA[TITLE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="5392b62a-ba19-4cbb-b62a-99fc0e01c804" x="395" y="43" width="180" height="20" forecolor="#FFFFFF"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="false"/>
+					</textElement>
+					<text><![CDATA[Add a description here]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement uuid="717b0284-7124-48bc-a86f-c76c862236e8" x="-20" y="20" width="595" height="1" forecolor="#666666"/>
+			</line>
+			<staticText>
+				<reportElement uuid="e5581463-1c55-4d88-a148-42c56e769574" mode="Opaque" x="0" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Paciente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="f3143af5-4a26-455f-893b-e7ffcd477f25" mode="Opaque" x="111" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Talla]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="fee77305-25d6-4f62-b0f0-bf3e678e1937" mode="Opaque" x="222" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Peso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="5966ab5b-8ae0-42b4-abc5-9cc0fe4cdb93" mode="Opaque" x="333" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Kcant]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="e10c2bc4-d0bb-4aa0-851f-bb30febc7016" mode="Opaque" x="444" y="0" width="111" height="20" forecolor="#006699" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nutricionista]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement uuid="2760aba1-1573-48fc-ba93-d1fe8e6d86fe" positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d91f1974-8fdd-44ca-a391-5c7eae395f72" x="0" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Paciente}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="3b21725d-f286-4420-ac91-fe77d6e2873b" x="111" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Talla}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="d1971a04-9b67-48f6-bf45-cdf7cbe0c6fa" x="222" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Peso}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="deec64a0-7450-43d4-ab41-b5fc28ef7fc7" x="333" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Kcant}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="ca87c2f4-539d-4b17-9bdb-a6e820f92ddd" x="444" y="0" width="111" height="20"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nutricionista}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement uuid="6293061f-5fb3-4250-8c17-8c814c84eaa3" mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="e02153c5-4fd8-4b36-b608-eeb3051f9784" mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="de94b4e7-79e5-4d98-b227-95e3f29437af" x="0" y="4" width="100" height="13"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

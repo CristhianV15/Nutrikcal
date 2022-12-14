@@ -390,6 +390,7 @@ public class FormMinuta extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
     public void llenarComboMenu() {
         CMinuta objetoMinuta = new CMinuta();

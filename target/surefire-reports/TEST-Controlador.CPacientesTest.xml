@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Controlador.CPacientesTest" time="1.361" tests="1" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="19"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="C:\Users\LENOVO\Documents\GitHub\Nutrikcal\target\test-classes;C:\Users\LENOVO\Documents\GitHub\Nutrikcal\target\classes;C:\Users\LENOVO\.m2\repository\com\microsoft\sqlserver\mssql-jdbc\11.2.1.jre18\mssql-jdbc-11.2.1.jre18.jar;C:\Users\LENOVO\.m2\repository\com\toedter\jcalendar\1.4\jcalendar-1.4.jar;C:\Users\LENOVO\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\LENOVO\.m2\repository\org\apache\poi\poi\3.17\poi-3.17.jar;C:\Users\LENOVO\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\LENOVO\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\LENOVO\.m2\repository\net\sf\jasperreports\jasperreports\4.5.0\jasperreports-4.5.0.jar;C:\Users\LENOVO\.m2\repository\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;C:\Users\LENOVO\.m2\repository\commons-collections\commons-collections\2.1\commons-collections-2.1.jar;C:\Users\LENOVO\.m2\repository\commons-digester\commons-digester\1.7\commons-digester-1.7.jar;C:\Users\LENOVO\.m2\repository\commons-logging\commons-logging\1.0.2\commons-logging-1.0.2.jar;C:\Users\LENOVO\.m2\repository\com\lowagie\itext\2.1.7\itext-2.1.7.jar;C:\Users\LENOVO\.m2\repository\bouncycastle\bcmail-jdk14\138\bcmail-jdk14-138.jar;C:\Users\LENOVO\.m2\repository\bouncycastle\bcprov-jdk14\138\bcprov-jdk14-138.jar;C:\Users\LENOVO\.m2\repository\org\bouncycastle\bctsp-jdk14\1.38\bctsp-jdk14-1.38.jar;C:\Users\LENOVO\.m2\repository\org\bouncycastle\bcprov-jdk14\1.38\bcprov-jdk14-1.38.jar;C:\Users\LENOVO\.m2\repository\org\bouncycastle\bcmail-jdk14\1.38\bcmail-jdk14-1.38.jar;C:\Users\LENOVO\.m2\repository\jfree\jcommon\1.0.15\jcommon-1.0.15.jar;C:\Users\LENOVO\.m2\repository\jfree\jfreechart\1.0.12\jfreechart-1.0.12.jar;C:\Users\LENOVO\.m2\repository\xml-apis\xml-apis\1.3.02\xml-apis-1.3.02.jar;C:\Users\LENOVO\.m2\repository\eclipse\jdtcore\3.1.0\jdtcore-3.1.0.jar;C:\Users\LENOVO\.m2\repository\org\codehaus\castor\castor\1.2\castor-1.2.jar;C:\Users\LENOVO\.m2\repository\org\apache\poi\poi-ooxml\3.7\poi-ooxml-3.7.jar;C:\Users\LENOVO\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.7\poi-ooxml-schemas-3.7.jar;C:\Users\LENOVO\.m2\repository\org\apache\xmlbeans\xmlbeans\2.3.0\xmlbeans-2.3.0.jar;C:\Users\LENOVO\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\LENOVO\.m2\repository\org\apache\geronimo\specs\geronimo-stax-api_1.0_spec\1.0\geronimo-stax-api_1.0_spec-1.0.jar;C:\Users\LENOVO\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\LENOVO\.m2\repository\org\codehaus\jackson\jackson-core-lgpl\1.7.4\jackson-core-lgpl-1.7.4.jar;C:\Users\LENOVO\.m2\repository\org\codehaus\jackson\jackson-mapper-lgpl\1.7.4\jackson-mapper-lgpl-1.7.4.jar;C:\Users\LENOVO\.m2\repository\com\sun\mail\javax.mail\1.6.0\javax.mail-1.6.0.jar;C:\Users\LENOVO\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\LENOVO\.m2\repository\org\mockito\mockito-all\2.0.2-beta\mockito-all-2.0.2-beta.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\LENOVO\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\LENOVO\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\LENOVO\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\LENOVO\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="America/Lima"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="19"/>
+    <property name="user.country" value="PE"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
+    <property name="sun.java.command" value="C:\Users\LENOVO\AppData\Local\Temp\surefire12331201626966307104\surefirebooter10612186134025516965.jar C:\Users\LENOVO\AppData\Local\Temp\surefire12331201626966307104 2022-12-13T22-25-26_189-jvmRun1 surefire11631079506988289566tmp surefire_014129671226142418058tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="Controlador.CPacientesTest#testInsertarPacientes"/>
+    <property name="surefire.test.class.path" value="C:\Users\LENOVO\Documents\GitHub\Nutrikcal\target\test-classes;C:\Users\LENOVO\Documents\GitHub\Nutrikcal\target\classes;C:\Users\LENOVO\.m2\repository\com\microsoft\sqlserver\mssql-jdbc\11.2.1.jre18\mssql-jdbc-11.2.1.jre18.jar;C:\Users\LENOVO\.m2\repository\com\toedter\jcalendar\1.4\jcalendar-1.4.jar;C:\Users\LENOVO\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\LENOVO\.m2\repository\org\apache\poi\poi\3.17\poi-3.17.jar;C:\Users\LENOVO\.m2\repository\commons-codec\commons-codec\1.10\commons-codec-1.10.jar;C:\Users\LENOVO\.m2\repository\org\apache\commons\commons-collections4\4.1\commons-collections4-4.1.jar;C:\Users\LENOVO\.m2\repository\net\sf\jasperreports\jasperreports\4.5.0\jasperreports-4.5.0.jar;C:\Users\LENOVO\.m2\repository\commons-beanutils\commons-beanutils\1.8.0\commons-beanutils-1.8.0.jar;C:\Users\LENOVO\.m2\repository\commons-collections\commons-collections\2.1\commons-collections-2.1.jar;C:\Users\LENOVO\.m2\repository\commons-digester\commons-digester\1.7\commons-digester-1.7.jar;C:\Users\LENOVO\.m2\repository\commons-logging\commons-logging\1.0.2\commons-logging-1.0.2.jar;C:\Users\LENOVO\.m2\repository\com\lowagie\itext\2.1.7\itext-2.1.7.jar;C:\Users\LENOVO\.m2\repository\bouncycastle\bcmail-jdk14\138\bcmail-jdk14-138.jar;C:\Users\LENOVO\.m2\repository\bouncycastle\bcprov-jdk14\138\bcprov-jdk14-138.jar;C:\Users\LENOVO\.m2\repository\org\bouncycastle\bctsp-jdk14\1.38\bctsp-jdk14-1.38.jar;C:\Users\LENOVO\.m2\repository\org\bouncycastle\bcprov-jdk14\1.38\bcprov-jdk14-1.38.jar;C:\Users\LENOVO\.m2\repository\org\bouncycastle\bcmail-jdk14\1.38\bcmail-jdk14-1.38.jar;C:\Users\LENOVO\.m2\repository\jfree\jcommon\1.0.15\jcommon-1.0.15.jar;C:\Users\LENOVO\.m2\repository\jfree\jfreechart\1.0.12\jfreechart-1.0.12.jar;C:\Users\LENOVO\.m2\repository\xml-apis\xml-apis\1.3.02\xml-apis-1.3.02.jar;C:\Users\LENOVO\.m2\repository\eclipse\jdtcore\3.1.0\jdtcore-3.1.0.jar;C:\Users\LENOVO\.m2\repository\org\codehaus\castor\castor\1.2\castor-1.2.jar;C:\Users\LENOVO\.m2\repository\org\apache\poi\poi-ooxml\3.7\poi-ooxml-3.7.jar;C:\Users\LENOVO\.m2\repository\org\apache\poi\poi-ooxml-schemas\3.7\poi-ooxml-schemas-3.7.jar;C:\Users\LENOVO\.m2\repository\org\apache\xmlbeans\xmlbeans\2.3.0\xmlbeans-2.3.0.jar;C:\Users\LENOVO\.m2\repository\stax\stax-api\1.0.1\stax-api-1.0.1.jar;C:\Users\LENOVO\.m2\repository\org\apache\geronimo\specs\geronimo-stax-api_1.0_spec\1.0\geronimo-stax-api_1.0_spec-1.0.jar;C:\Users\LENOVO\.m2\repository\dom4j\dom4j\1.6.1\dom4j-1.6.1.jar;C:\Users\LENOVO\.m2\repository\org\codehaus\jackson\jackson-core-lgpl\1.7.4\jackson-core-lgpl-1.7.4.jar;C:\Users\LENOVO\.m2\repository\org\codehaus\jackson\jackson-mapper-lgpl\1.7.4\jackson-mapper-lgpl-1.7.4.jar;C:\Users\LENOVO\.m2\repository\com\sun\mail\javax.mail\1.6.0\javax.mail-1.6.0.jar;C:\Users\LENOVO\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\LENOVO\.m2\repository\org\mockito\mockito-all\2.0.2-beta\mockito-all-2.0.2-beta.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;C:\Users\LENOVO\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\LENOVO\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\LENOVO\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.6.0\junit-jupiter-params-5.6.0.jar;C:\Users\LENOVO\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\LENOVO\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\LENOVO"/>
+    <property name="user.language" value="es"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-10-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-19"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="C:\Users\LENOVO\Documents\GitHub\Nutrikcal"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\LENOVO\AppData\Local\Temp\surefire12331201626966307104\surefirebooter10612186134025516965.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="19.0.1+10-21"/>
+    <property name="user.name" value="LENOVO"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="maven.ext.class.path" value="C:\Program Files\NetBeans-15\netbeans\java\maven-nblib\netbeans-eventspy.jar"/>
+    <property name="localRepository" value="C:\Users\LENOVO\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\LENOVO\AppData\Local\Temp\"/>
+    <property name="java.version" value="19.0.1"/>
+    <property name="user.dir" value="C:\Users\LENOVO\Documents\GitHub\Nutrikcal"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-19\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files\Maven\apache-maven-3.8.6\bin;C:\Program Files (x86)\Microsoft SQL Server\110\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\LENOVO\AppData\Local\Programs\Python\Python311\;C:\Users\LENOVO\AppData\Local\Microsoft\WindowsApps;C:\Users\LENOVO\.dotnet\tools;C:\Users\LENOVO\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Azure Data Studio\bin;C:\Users\LENOVO\AppData\Local\GitHubDesktop\bin;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="19.0.1+10-21"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="63.0"/>
+  </properties>
+  <testcase name="testInsertarPacientes" classname="Controlador.CPacientesTest" time="1.337">
+    <failure message="Fallo el insertarPacientes" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: Fallo el insertarPacientes
+	at Controlador.CPacientesTest.testInsertarPacientes(CPacientesTest.java:134)
+</failure>
+    <system-out><![CDATA[InsertarPacientes
+Error: com.microsoft.sqlserver.jdbc.SQLServerException: String or binary data would be truncated.
+]]></system-out>
+  </testcase>
+</testsuite>

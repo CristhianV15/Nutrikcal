@@ -24,7 +24,7 @@ public class Paciente extends javax.swing.JFrame {
         //Metodos para deshabilitar campos y botones
         deshabilitarCampos();
         deshabilitarBotones();
-
+        txtNacString.hide();
     }
 
     /**
@@ -276,6 +276,11 @@ public class Paciente extends javax.swing.JFrame {
         });
 
         txtNacString.setText("jTextField1");
+        txtNacString.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNacStringActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -332,6 +337,7 @@ public class Paciente extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void tablePacientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablePacientesMouseClicked
@@ -457,6 +463,10 @@ public class Paciente extends javax.swing.JFrame {
            
        }
     }//GEN-LAST:event_btnExcelActionPerformed
+
+    private void txtNacStringActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNacStringActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNacStringActionPerformed
 
     //METODOS DE MANTENIMIENTO
     public void habilitarCampos() {
