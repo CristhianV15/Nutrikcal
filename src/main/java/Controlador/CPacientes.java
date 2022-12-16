@@ -84,9 +84,15 @@ public class CPacientes {
                 pCorreo.setText(paramTablaPacientes.getValueAt(fila, 4).toString());
                 pSexo.setText(paramTablaPacientes.getValueAt(fila, 5).toString());
                 pDatosA.setText(paramTablaPacientes.getValueAt(fila, 6).toString());
-                pFechaString.setText(paramTablaPacientes.getValueAt(fila, 7).toString());
-                Date date= new SimpleDateFormat("yyyy-MM-dd").parse((String)paramTablaPacientes.getValueAt(fila, 7));
-                pFechaNac.setDate(date);
+                
+//                String fecha=paramTablaPacientes.getValueAt(fila, 7).toString(); //1996-03-25
+//                Date fechaTipoDate= new SimpleDateFormat("yyyy-MM-dd").parse((String)fecha);
+//                pFechaNac.setDate(fechaTipoDate);
+                
+//   pFechaString.setText(paramTablaPacientes.getValueAt(fila, 7).toString());
+                Date date= new SimpleDateFormat("yyyy-mm-dd").parse((String)paramTablaPacientes.getValueAt(fila, 7));
+pFechaNac.setDate(date);                
+//pFechaNac.setDate(date);
                 pDNI.setText(paramTablaPacientes.getValueAt(fila, 8).toString());
             } else {
                 System.out.println("No se encontraron registros");
@@ -95,9 +101,9 @@ public class CPacientes {
             JOptionPane.showMessageDialog(null, "ERROR: " + e);
         }
          //Transformar string a date
-        String fechaNac = pFechaString.getText();
-        pFechaNac.setDateFormatString(fechaNac);
-        System.out.println(pFechaString.getText());
+//        String fechaNac = pFechaString.getText();
+//        pFechaNac.setDateFormatString(fechaNac);
+//        System.out.println(pFechaString.getText());
     }
 
     public void InsertarPacientes(JTextField pNombre, JTextField pApellido, JTextField pTelefono, JTextField pCorreo, JTextField pSexo, JTextArea pDatosA, JDateChooser pFechaNac, JTextField pDNI) {
@@ -197,13 +203,9 @@ public class CPacientes {
         //Matriz
         String[] datos = new String[2];
         try {
-            //CallableStatement cs = objetoConexion.establecerConexion().prepareCall(sql);
-            //  cs.setInt(1, Integer.parseInt(pCodigo.getText()));
             pstatement = objetoConexion.establecerConexion().prepareStatement(sql);
-            //pstatement = connection.prepareStatement(sql);
             pstatement.setString(1, pDNI.getText());
             ResultSet rs = pstatement.executeQuery();
-            //ResultSet rs = cs.executeQuery(sql);
             while (rs.next()) {
                 pEdad.setText(rs.getString(1));
                 pSexo.setText(rs.getString(2));

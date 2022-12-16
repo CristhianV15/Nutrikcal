@@ -91,8 +91,8 @@ public class CMinuta {
         //Modificando el valor para minimo y maximo
         int valor = Integer.parseInt(pCantKcal.getText());
         int valormin = 0, valormax = 0;
-        valormin = valor - 250;
-        valormax = valor + 250;
+        valormin = valor - 200;
+        valormax = valor + 200;
         try {
             CallableStatement cmd = objetoConexion.establecerConexion().prepareCall("{CALL SP_COMBO_MENU(?,?)}");
             //{call procedure-name[([parameter][,[parameter]]...)]}

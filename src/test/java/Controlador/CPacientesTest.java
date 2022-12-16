@@ -131,7 +131,7 @@ public class CPacientesTest {
         instance.InsertarPacientes(pNombre, pApellido, pTelefono, pCorreo, pSexo, pDatosA, pFechaNac, pDNI);
         
         // TODO review the generated test code and remove the default call to fail.
-        fail("Fallo el insertarPacientes");
+        //fail("Fallo el insertarPacientes");
     }
 
     /**
@@ -152,7 +152,7 @@ public class CPacientesTest {
         CPacientes instance = new CPacientes();
         instance.ModificarPacientes(pCodigo, pNombre, pApellido, pTelefono, pCorreo, pSexo, pDatosA, pFechaNac, pDNI);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+      //  fail("The test case is a prototype.");
     }
 
     /**

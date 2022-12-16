@@ -24,17 +24,14 @@ public class FormMinuta extends javax.swing.JFrame {
     public FormMinuta() {
         initComponents();
         llenarComboMenu();
-        //Ocultar campos que se enviaran al otro formulario
-//        txtIdMenu.hide();
+
         txtNombrePacienteGl.setEnabled(false);
-        //Metodos para deshabilitar campos y botones
-        deshabilitarCampos();
-        deshabilitarBotones();
+        jButton1.setEnabled(false);
+        //Ocultar
         lblCodigo.hide();
         txtIdMenu.hide();
         idMinutaa.hide();
         lblCorreoTres.hide();
-        jButton1.setEnabled(false);
 
     }
 
@@ -457,9 +454,12 @@ public class FormMinuta extends javax.swing.JFrame {
     private void btnEnviarMinutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarMinutaActionPerformed
         // TODO add your handling code here:
           Correo objetoCorreo= new Correo();
-      
+        
+        //Variables para enviar
+        String nombreP = txtNombrePacienteGl.getText();
+        String kcalR= lblKcalRecomendadasG.getText();
         try {
-            objetoCorreo.enviarCorreo(lblCorreoTres.getText());
+            objetoCorreo.enviarCorreo(lblCorreoTres.getText(),nombreP,kcalR);
             JOptionPane.showMessageDialog(null, "Se envio correctamente");
         } catch (MessagingException ex) {
             Logger.getLogger(FormEvaluacion.class.getName()).log(Level.SEVERE, null, ex);
@@ -467,22 +467,7 @@ public class FormMinuta extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEnviarMinutaActionPerformed
 
-    //METODOS DE MANTENIMIENTO
-    public void habilitarCampos() {
-      
-    }
-
-    public void deshabilitarCampos() {
-        
-    }
-
-    public void deshabilitarBotones() {
-      
-    }
-
-    private void limpiarCampos() {
-      
-    }
+   
 
     /**
      * @param args the command line arguments

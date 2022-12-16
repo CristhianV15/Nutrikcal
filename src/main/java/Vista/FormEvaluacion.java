@@ -26,13 +26,16 @@ public class FormEvaluacion extends javax.swing.JFrame {
     public FormEvaluacion() {
         initComponents();
         llenarComboNutricionista();
-        txtEdadP.setEnabled(false);
+        //Ocultar Campos
         txtCodigoPaciente.hide();
         idNutricionista.hide();
         lblCorreoUno.hide();
+        txtKcalDoble.hide();
+        
+        //Deshabilitar campos&&botones
         txtSexoP.setEnabled(false);
         btnGuardar.setEnabled(false);
-        txtKcalDoble.hide();
+        txtEdadP.setEnabled(false);
         btnCrearMinutas.setEnabled(false);
     }
 
@@ -327,11 +330,29 @@ public class FormEvaluacion extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    public int Formula(int edad, double peso, int altura, String sexo) {
+        
+        Integer valor = 0;
+        if (sexo.equalsIgnoreCase("Masculino")) {
+            valor = 5;
+        } else {
+            valor = -161;
+        }
+        int resultado = (int) ((10 * peso) + (6.25 * altura) - (5 * edad) + valor);
+        System.out.println("El resultado es : " + resultado + "a consumir");
+        return resultado + 300;
+    }
+    
     private void btnCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularActionPerformed
         // TODO add your handling code here:
         lblMensaje.setText("Kcal diarias recomendadas");
         Integer kcal = 0;
-        kcal = Formula();
+        //Variables
+        int edad = Integer.parseInt(txtEdadP.getText());
+        double peso = Double.parseDouble(txtPeso.getText());
+        int altura = Integer.parseInt(txtTalla.getText());
+        String sexo= txtSexoP.getText();
+        kcal = Formula(edad,peso,altura,sexo);
         lblKcal.setText(kcal.toString());
         btnGuardar.setEnabled(true);
         txtKcalDoble.setText(kcal.toString());
@@ -343,7 +364,7 @@ public class FormEvaluacion extends javax.swing.JFrame {
         btnCrearMinutas.setEnabled(true);
         CEvaluacion objetoPaciente = new CEvaluacion();
         objetoPaciente.mostrarEvaluacion(txtCodigoPaciente, tbEvaluacion);
-
+        btnGuardar.setEnabled(false);
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void cboNutricionistaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cboNutricionistaMouseClicked
@@ -375,21 +396,21 @@ public class FormEvaluacion extends javax.swing.JFrame {
 
     private void btnExportarHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExportarHistorialActionPerformed
         
-//        Reportes r = new Reportes();
-//        try {
-//            r.mostrarReporteNutricional("../reporteNutricional.jasper");
-//        } catch (Exception e) {
-//            JOptionPane.showMessageDialog(null, "Ocurrio un error.. " + e.getMessage());
-//        }
-
-       Correo objetoCorreo= new Correo();
-      
+        Reportes r = new Reportes();
         try {
-            objetoCorreo.enviarCorreo("dbrf.jrrhz65@nefyp.com");
-        } catch (MessagingException ex) {
-            Logger.getLogger(FormEvaluacion.class.getName()).log(Level.SEVERE, null, ex);
+            r.mostrarReporteNutricional("../reporteJasper/reporteTodosNutricional.jasper");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Ocurrio un error.. " + e.getMessage());
         }
-        
+
+//       Correo objetoCorreo= new Correo();
+//      
+//        try {
+//            objetoCorreo.enviarCorreo("dbrf.jrrhz65@nefyp.com");
+//        } catch (MessagingException ex) {
+//            Logger.getLogger(FormEvaluacion.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//        
        
     }//GEN-LAST:event_btnExportarHistorialActionPerformed
 
@@ -410,20 +431,7 @@ public class FormEvaluacion extends javax.swing.JFrame {
         cboNutricionista.setModel(objetoEvaluacion.llenar());
     }
 
-    public int Formula() {
-        Integer edad = Integer.parseInt(txtEdadP.getText());
-        Double peso = Double.parseDouble(txtPeso.getText());
-        Integer altura = Integer.parseInt(txtTalla.getText());;
-        Integer valor = 0;
-        if (txtSexoP.getText().equalsIgnoreCase("Masculino")) {
-            valor = 5;
-        } else {
-            valor = -161;
-        }
-        int resultado = (int) ((10 * peso) + (6.25 * altura) - (5 * edad) + valor);
-        System.out.println("El resultado es : " + resultado + "a consumir");
-        return resultado + 300;
-    }
+    
 
     /**
      * @param args the command line arguments

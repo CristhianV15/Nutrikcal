@@ -1,4 +1,4 @@
-/*
+    /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
@@ -19,12 +19,14 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 /**
  *
  * @author crist
  */
 public class Correo {
-    public void enviarCorreo(String correo) throws MessagingException{
+    public void enviarCorreo(String correo,String pNombre, String Pkcal ) throws MessagingException{
         String correoEnviar="anon.utp@gmail.com";
         String contrasena="bdkgcozrdwraegrw";
         String mensaje="probando correo";
@@ -49,7 +51,8 @@ public class Correo {
         
         //Envio de adjuntos
         BodyPart texto= new MimeBodyPart();
-        texto.setText("archivo adjunto enviado ");
+        String TextoEnvio="Hola " +  pNombre + " ,tu nutricionista te ha recomendado " + Pkcal+ " calorias diarias, adjuntamos la minuta recomendada";
+        texto.setText(TextoEnvio);
         BodyPart adjunto = new MimeBodyPart();
         adjunto.setDataHandler(new DataHandler(new FileDataSource(archivoSeleccionado)));
         adjunto.setFileName("Minuta.xls");
@@ -60,7 +63,7 @@ public class Correo {
         try{
             mail.setFrom(new InternetAddress(correoEnviar));
             mail.addRecipient(Message.RecipientType.TO,new InternetAddress(correo));
-            mail.setSubject("Probando envio");
+            mail.setSubject("Minuta Semanal -- Nutrikcal");
             mail.setText(mensaje);
             mail.setContent(m);
             Transport transporte= sesion.getTransport("smtp");

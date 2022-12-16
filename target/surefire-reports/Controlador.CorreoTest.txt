@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: Controlador.CPacientesTest
+Test set: Controlador.CorreoTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.049 s - in Controlador.CPacientesTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 14.65 s - in Controlador.CorreoTest

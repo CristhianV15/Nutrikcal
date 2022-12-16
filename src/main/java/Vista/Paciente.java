@@ -20,11 +20,12 @@ public class Paciente extends javax.swing.JFrame {
         //Ocultar campos que se enviaran al otro formulario
         txtCodigo.hide();
         txtEdad.hide();
-        btnExcel.setEnabled(false);
+        //txtNacString.hide();
+        
         //Metodos para deshabilitar campos y botones
+        btnExcel.setEnabled(false);
         deshabilitarCampos();
         deshabilitarBotones();
-        txtNacString.hide();
     }
 
     /**
@@ -57,8 +58,8 @@ public class Paciente extends javax.swing.JFrame {
         btnBuscar = new javax.swing.JButton();
         txtDNI = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        fechaNac = new com.toedter.calendar.JDateChooser();
         btnNuevo = new javax.swing.JButton();
+        fechaNac = new com.toedter.calendar.JDateChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         tablePacientes = new javax.swing.JTable();
         txtCodigo = new javax.swing.JTextField();
@@ -197,7 +198,7 @@ public class Paciente extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel5)
                     .addComponent(fechaNac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtDNI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8))
@@ -208,7 +209,7 @@ public class Paciente extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(btnGuardar)
@@ -342,6 +343,7 @@ public class Paciente extends javax.swing.JFrame {
 
     private void tablePacientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablePacientesMouseClicked
         // TODO add your handling code here:
+        fechaNac.setCalendar(null);
         CPacientes objetoPaciente = new CPacientes();
         objetoPaciente.SeleccionarPacientes(tablePacientes, txtCodigo, txtNombre, txtApellido, txtTelefono, txtCorreo, txtSexo, txtDatosAdicionales, fechaNac, txtDNI, txtNacString);
         habilitarCampos();
@@ -422,8 +424,6 @@ public class Paciente extends javax.swing.JFrame {
             
             
             dispose();
-            
-            
         }
     }//GEN-LAST:event_btnEvalNutriActionPerformed
 
